@@ -1,2 +1,2 @@
-# issdrone-pi
-Autonomous Drone - ISS - Programs for Raspberry Pi
+# drone 
+Autonomous Drone - Programs for Raspberry Pi
