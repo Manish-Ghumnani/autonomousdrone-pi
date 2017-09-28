@@ -1,10 +1,7 @@
-###########################################################################################
 import RPi.GPIO as GPIO
 import time
 import threading
 
-
-#######################################################################################################################
 class Sonar:
     global distance
    
@@ -20,7 +17,7 @@ class Sonar:
         GPIO.setup(self.TRIG, GPIO.OUT)
         GPIO.setup(self.ECHO, GPIO.IN)
         GPIO.output(self.TRIG, False)
-        print "Waiting For Sensor %d  To Settle"%(i)
+        print ("Waiting For Sensor %d  To Settle"%(i))
         print("Connected Successfuly to Sensor %d"%(i))
         i=i+1
         time.sleep(1)

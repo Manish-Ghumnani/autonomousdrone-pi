@@ -1,10 +1,11 @@
 import time
 import math
-from stoppable_thread import StoppableThread
-from flight_data import FlightData
-from flight_commands import FlightCommands
-from Sensors import Sensors
-from vehicle import Vehicle
+
+from sg.nus.iss.autonomousdrone.thread.stoppable_thread import StoppableThread
+from sg.nus.iss.autonomousdrone.flight.flight_commands import FlightCommands
+from sg.nus.iss.autonomousdrone.sensors.sensors import Sensors
+from sg.nus.iss.autonomousdrone.flight.flight_data import FlightData
+
 
 class ObstacleAvoidance(StoppableThread):
     # Class constants

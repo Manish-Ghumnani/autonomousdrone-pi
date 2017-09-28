@@ -1,5 +1,5 @@
-import simulator
-from vehicle import Vehicle
+from dronekit import VehicleMode
+from sg.nus.iss.autonomousdrone.vehicle.vehicle import Vehicle
 
 class FlightCommands:
 
@@ -11,6 +11,16 @@ class FlightCommands:
              raise TypeError('Expected object of type Vehicle, got '+type(vehicle).__name__)
 
          self.__vehicle = vehicle
+
+    def arm(self):
+        self.vehicle.mode = VehicleMode("STABILIZE")
+        self.vehicle.armed = True
+        return
+
+    def disarm(self):
+        if (None!=self.vehicle and self.vehicle.armed):
+            self.vehicle.armed = False
+            return
 
     # Order the drone to land.
     def land(self):

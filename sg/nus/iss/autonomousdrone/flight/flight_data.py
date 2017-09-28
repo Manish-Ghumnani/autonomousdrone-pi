@@ -1,6 +1,8 @@
 import math
-import simulator
-from  vehicle import Vehicle
+
+from sg.nus.iss.autonomousdrone.sensors import simulator
+from sg.nus.iss.autonomousdrone.vehicle.vehicle import Vehicle
+
 
 class FlightData:
 

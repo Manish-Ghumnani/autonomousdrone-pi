@@ -15,8 +15,6 @@ __longitude = 0
 ##    print("Error: Can't open sensors data file")
 
 
-
-
 # Returns below sensor simulated measurament
 def below_reading():
     global __below_reading

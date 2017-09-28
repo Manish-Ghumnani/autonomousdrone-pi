@@ -1,7 +1,5 @@
 import threading
 
-
-
 class StoppableThread(threading.Thread):
     # This is a Thread class with a stop() method. The thread itself has to check constantly if it's been stopped by
     # using the stopped() method.

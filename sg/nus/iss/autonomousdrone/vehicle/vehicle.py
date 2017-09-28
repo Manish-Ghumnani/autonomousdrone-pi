@@ -6,13 +6,12 @@ from pymavlink import mavutil  # Needed for command message definitions
 
 import socket
 import sys
-print "Start simulator (SITL)"
-import dronekit_sitl
-print "Before SITL"
+print ("Start simulator (SITL)")
+print ("Before SITL")
 #sitl = dronekit_sitl.start_default()
 
-import argparse  
-            
+import argparse
+
 
 
 class Vehicle:
@@ -24,7 +23,7 @@ class Vehicle:
         parser = argparse.ArgumentParser()
         parser.add_argument('--connect', default='tcp:localhost:5760')
         args = parser.parse_args()
-        print 'Connecting to vehicle on: %s' % args.connect
+        print ('Connecting to vehicle on: %s' % args.connect)
         self.vehicle = connect(args.connect, baud=57600, wait_ready=True)
         
 
@@ -50,13 +49,7 @@ class Vehicle:
 
         self.print_vehicle_full_state_info()    # Print the vehicle status
 
-    #######################################################################################################################################################################
-    #######################################################################################################################################################################
-    #######################################################################################################################################################################
 
-    ##############################################
-    #				SETTERS						 #
-    ##############################################
     def set_parameters(self, parameter, value):
         self.vehicle.parameters[parameter] = value
 

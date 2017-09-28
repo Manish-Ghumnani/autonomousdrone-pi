@@ -1,4 +1,5 @@
-from Ultrasonic import Sonar
+from sg.nus.iss.autonomousdrone.sensors.ultrasonic import Sonar
+
 
 class Sensors:
 
@@ -11,8 +12,8 @@ class Sensors:
     # Returns distance measurement from the front sensor
     def check_ahead(self):
         ahead_read = self.__front_sensor.get_distance()
-##        if ahead_read <= 0 or ahead_read > 200:  # This is the the CAUTION DISTANCE from ObstacleAvoidance class.
-##            #simulator.skip()
+        ##if ahead_read <= 0 or ahead_read > 200:  # This is the the CAUTION DISTANCE from ObstacleAvoidance class.
+            ###simulator.skip()
         return ahead_read
 
     # Returns distance measurement from the left sensor
