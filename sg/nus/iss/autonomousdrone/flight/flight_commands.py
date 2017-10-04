@@ -5,21 +5,22 @@ class FlightCommands:
 
     TIME_TO_COLLISION = 10
 
-    def __init__(self, vehicle):
-         # Check for correct input
-         if isinstance(vehicle, Vehicle) is False:
-             raise TypeError('Expected object of type Vehicle, got '+type(vehicle).__name__)
-
-         self.__vehicle = vehicle
+    def __init__(self):
+        # Check for correct input
+        vehicle = Vehicle()
+        if isinstance(vehicle, Vehicle) is False:
+            raise TypeError('Expected object of type Vehicle, got '+type(vehicle).__name__)
+        self.__vehicle = vehicle
 
     def arm(self):
-        self.vehicle.mode = VehicleMode("STABILIZE")
-        self.vehicle.armed = True
+        self.__vehicle.mode = VehicleMode("STABILIZE")
+        self.__vehicle.armed = True
+        print "Armed!"
         return
 
     def disarm(self):
-        if (None!=self.vehicle and self.vehicle.armed):
-            self.vehicle.armed = False
+        if (None!=self.__vehicle and self.__vehicle.armed):
+            self.__vehicle.armed = False
             return
 
     # Order the drone to land.

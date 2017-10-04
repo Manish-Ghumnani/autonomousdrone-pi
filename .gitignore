@@ -105,3 +105,6 @@ venv.bak/
 
 #IDE
 .idea/
+/.idea/misc.xml
+/.idea/Python.iml
+/.idea/workspace.xml
